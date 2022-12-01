@@ -24,7 +24,7 @@ function App() {
     <>
       <ThemeProvider theme={darkTheme}>
         <Navbar darkToggle={theme} onToggle={() => setTheme(!theme)} />
-        <div className='flex justify-center w-screen h-screen p-10'>
+        <div className='flex justify-center h-screen p-10'>
           {!!!pokemons ? (
             'loading'
           ) : (
