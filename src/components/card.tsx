@@ -24,14 +24,13 @@ export const CustomCard = ({ url, name }: CardProps) => {
 
   return (
     <Card
-      sx={{ maxWidth: 345, height: 450 }}
+      sx={{ maxWidth: 345, height: 400 }}
       className='drop-shadow-lg hover:drop-shadow-2xl'
     >
-      <CardMedia
-        component='img'
-        height='100'
-        image={url ? imageUrl : 'https://placehold.co/300x200/png'}
+      <img
+        src={url ? imageUrl : 'https://placehold.co/300x200/png'}
         alt={`pokemon - ${name}`}
+        className='h-96 w-72 max-h-80 object-contain'
       />
       <CardContent>
         <Typography
