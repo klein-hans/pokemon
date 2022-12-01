@@ -3,8 +3,6 @@ import './App.css';
 import { CustomCard as Card } from './components/card';
 import { CustomNavbar as Navbar } from './components/navbar';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { PaletteMode } from '@mui/material';
-import CssBaseline from '@mui/material/CssBaseline';
 
 function App() {
   const [theme, setTheme] = useState(true);
@@ -30,7 +28,7 @@ function App() {
           {!!!pokemons ? (
             'loading'
           ) : (
-            <div class='grid gap-4 grid-cols-3'>
+            <div className='grid gap-4 grid-cols-3'>
               {pokemons.map((item: any, index: number) => (
                 <Card name={item.name} url={item.url} key={index} />
               ))}
